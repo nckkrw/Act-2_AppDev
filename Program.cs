@@ -18,8 +18,9 @@ class Program
             Console.WriteLine("1. Add Task");
             Console.WriteLine("2. View Tasks");
             Console.WriteLine("3. Remove Task");
-            Console.WriteLine("4. Exit");
-            Console.Write("Choose an option (1-4): ");
+            Console.WriteLine("4. Show total number of tasks");
+            Console.WriteLine("5. Exit");
+            Console.Write("Choose an option (1-5): ");
             string choice = Console.ReadLine();
 
             switch (choice)
@@ -62,6 +63,10 @@ class Program
                     break;
 
                 case "4":
+                    Console.WriteLine($"You have {todoList.Count} task(s) in your list.");
+                    break;
+
+                case "5":
                     running = false;
                     Console.WriteLine("Exiting program... Goodbye!");
                     break;
